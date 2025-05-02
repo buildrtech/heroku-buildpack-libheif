@@ -7,12 +7,11 @@ CACHE_DIR=$2
 
 # ✅ Call build scripts
 bash "$(dirname "$0")/../libheif_build.sh" "$BUILD_DIR"
-bash "$(dirname "$0")/../imagemagick_build.sh" "$BUILD_DIR"
 
 # ✅ Add runtime environment config via profile.d
 mkdir -p "$BUILD_DIR/.profile.d"
-cp "$(dirname "$0")/../profile.d/imagemagick_env.sh" "$BUILD_DIR/.profile.d/"
+cp "$(dirname "$0")/../profile.d/libheif_env.sh" "$BUILD_DIR/.profile.d/"
 
 echo "✅ Installed runtime environment script:"
 ls -l "$BUILD_DIR/.profile.d/"
-cat "$BUILD_DIR/.profile.d/imagemagick_env.sh"
+cat "$BUILD_DIR/.profile.d/libheif_env.sh"
