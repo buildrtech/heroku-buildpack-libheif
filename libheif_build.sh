@@ -19,9 +19,9 @@ mkdir -p "$BUILD_TMP"
 cd "$BUILD_TMP"
 
 # Download and extract libheif
-curl -LO https://github.com/strukturag/libheif/releases/download/v1.19.7/libheif-1.19.7.tar.gz
-tar xzf libheif-1.19.7.tar.gz
-cd libheif-1.19.7
+curl -LO https://github.com/strukturag/libheif/releases/download/v1.19.8/libheif-1.19.8.tar.gz
+tar xzf libheif-1.19.8.tar.gz
+cd libheif-1.19.8
 
 # Create install structure so Heroku doesn't drop it
 mkdir -p "$INSTALL_DIR/bin" "$INSTALL_DIR/lib"
